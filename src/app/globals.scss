@@ -1,0 +1,377 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full mx-auto px-[1rem] minmd:px-[2.5rem] minxl:px-[6rem] minxl:max-w-[1440px];
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+    @media (max-width: 1135px) {
+      display: none;
+    }
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 6px
+      rgba(0, 0, 0, 0.3);
+    background-color: #454f59;
+  }
+
+  /* .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  } */
+}
+
+.student-item-1 .student-item-desc {
+  position: relative;
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+
+  background-color: #70EDFD;
+
+  z-index: 10;
+}
+
+.student-item-1 .student-overlay {
+  position: relative;
+  z-index: 9;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 92px;
+
+    top: -22px;
+    right: 112px;
+    background-color: #FDDD00;
+    border-radius: 16px;
+    opacity: 0.5;
+
+    z-index: 8;
+
+    @media screen and (min-width: 1135px) {
+      right: -38px;
+    }
+  }
+}
+
+.student-item-2 .student-item-desc {
+  position: relative;
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+
+  background-color: #FDDD00;
+
+  z-index: 10;
+}
+
+.student-item-2 .student-overlay {
+  position: relative;
+  z-index: 9;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 175px;
+    height: 157px;
+
+    top: 60px;
+    left: 0px;
+    background-color: #1FBAE180;
+    border-radius: 16px;
+    opacity: 0.5;
+
+    z-index: 8;
+
+    @media screen and (min-width: 575px) {
+      left: 25px;
+    }
+
+    @media screen and (min-width: 1135px) {
+      left: -60px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      left: -24px;
+    }
+  }
+}
+
+.student-item-3 .student-item-desc {
+  position: relative;
+  -webkit-backdrop-filter: blur(20.5px);
+  backdrop-filter: blur(20.5px);
+
+  background-color: #89E1F7;
+
+  z-index: 10;
+}
+
+.student-item-3 .student-overlay {
+  position: relative;
+  z-index: 9;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 175px;
+    height: 157px;
+
+    top: -250px;
+    right: 0;
+    background-color: #A0EFF999;
+    border-radius: 16px;
+    opacity: 0.5;
+
+    z-index: 8;
+
+    @media screen and (min-width: 575px) {
+      right: 20px;
+    }
+
+    @media screen and (min-width: 1135px) {
+      top: 100px;
+      right: unset;
+      left: -74px;
+    }
+  }
+}
+
+.course-outcome-bg-1 {
+  background-color: #E1F0FF;
+}
+
+.course-outcome-bg-2 {
+  background-color: #DAF4FC;
+}
+
+.course-outcome-bg-3 {
+  background-color: #DCFEFF;
+}
+
+.module-list {
+  will-change: transform, opacity;
+}
+
+.md01 {
+  --bg-before: #02ADD8;
+  --bg-after: #FDE433;
+}
+
+.chapter-wrapper-md01 {
+  --chapter-wrapper-bg: #F7F8F9;
+  --chapter-number: #02ADD8;
+}
+
+.md02 {
+  --bg-before: #02ADD8;
+  --bg-after: #FDE433;
+}
+
+.chapter-wrapper-md02 {
+  --chapter-wrapper-bg: #F7F8F9;
+  --chapter-number: #02ADD8;
+}
+
+.md03 {
+  --bg-before: #02ADD8;
+  --bg-after: #FDE433;
+}
+
+.chapter-wrapper-md03 {
+  --chapter-wrapper-bg: #F7F8F9;
+  --chapter-number: #02ADD8;
+}
+
+.md04 {
+  --bg-before: #02ADD8;
+  --bg-after: #FDE433;
+}
+
+.chapter-wrapper-md04 {
+  --chapter-wrapper-bg: #F7F8F9;
+  --chapter-number: #02ADD8;
+}
+
+.md05 {
+  --bg-before: #02ADD8;
+  --bg-after: #FDE433;
+}
+
+.chapter-wrapper-md05 {
+  --chapter-wrapper-bg: #F7F8F9;
+  --chapter-number: #02ADD8;
+}
+
+.md06 {
+  --bg-before: #02ADD8;
+  --bg-after: #FDE433;
+}
+
+.chapter-wrapper-md06 {
+  --chapter-wrapper-bg: #F7F8F9;
+  --chapter-number: #02ADD8;
+}
+
+.md07 {
+  --bg-before: #02ADD8;
+  --bg-after: #FDE433;
+}
+
+.chapter-wrapper-md07 {
+  --chapter-wrapper-bg: #F7F8F9;
+  --chapter-number: #02ADD8;
+}
+
+.md08 {
+  --bg-before: #02ADD8;
+  --bg-after: #FDE433;
+}
+
+.chapter-wrapper-md08 {
+  --chapter-wrapper-bg: #F7F8F9;
+  --chapter-number: #02ADD8;
+}
+
+.md09 {
+  --bg-before: #02ADD8;
+  --bg-after: #FDE433;
+}
+
+.chapter-wrapper-md09 {
+  --chapter-wrapper-bg: #F7F8F9;
+  --chapter-number: #02ADD8;
+}
+
+.md10 {
+  --bg-before: #02ADD8;
+  --bg-after: #FDE433;
+}
+
+.chapter-wrapper-md10 {
+  --chapter-wrapper-bg: #F7F8F9;
+  --chapter-number: #02ADD8;
+}
+
+.md11 {
+  --bg-before: #02ADD8;
+  --bg-after: #FDE433;
+}
+
+.chapter-wrapper-md11 {
+  --chapter-wrapper-bg: #F7F8F9;
+  --chapter-number: #02ADD8;
+}
+
+.module-number {
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    opacity: 0;
+    background: var(--bg-before);
+    transition: opacity 0.3s;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+
+    background: var(--bg-after);
+    transition: transform 0.3s;
+    pointer-events: none;
+  }
+
+
+}
+
+.module-number-wrapper {
+  .module-number.active {
+
+    color: #FDE433;
+    &::before {
+      opacity: 1;
+      z-index: -1;
+    }
+
+    &::after {
+      transform: scaleY(1);
+      transform-origin: 100% 0;
+    }
+  }
+}
+
+.chapter-item {
+  border-radius: 8px;
+  border: 1px solid #B3B9C4;
+  background: #fff;
+  backdrop-filter: blur(20px);
+}
+
+.chapter-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F7F8F9;
+
+  @media screen and (min-width: 575px) {
+    border-radius: 0px 32px 32px 0px;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: var(
+      --chapter-wrapper-bg
+    );
+    z-index: -1;
+  }
+
+  .chapter-number {
+    color: var(--chapter-number);
+  }
+}

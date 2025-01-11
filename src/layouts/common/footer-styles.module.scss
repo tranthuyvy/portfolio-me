@@ -1,0 +1,31 @@
+.messenger {
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    border: 1px solid #0052c2;
+    border-radius: 100%;
+    animation: ripple 2s linear infinite;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    border: 1.5px solid #0052c2;
+    border-radius: 100%;
+    animation: ripple 2s 1s linear
+      infinite;
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
