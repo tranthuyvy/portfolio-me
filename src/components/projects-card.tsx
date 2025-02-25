@@ -44,7 +44,7 @@ export default function ProjectCards({
           </CardTitle>
         </CardHeader>
 
-        <CardContent className="flex-grow flex flex-col gap-4">
+        <CardContent className="grow flex flex-col gap-4">
           <p className="text-sm text-muted-foreground leading-relaxed">
             {value.description}
           </p>

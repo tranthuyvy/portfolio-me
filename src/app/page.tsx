@@ -2,7 +2,7 @@ import HeroTitle from '@/components/hero-title';
 import HeroImage from '@/components/hero-image';
 import SocialLinks from '@/components/social-links';
 import GithubBtn from '@/components/animation/github-btn';
-import DownloadResume from '@/components/downLoad-resume-btn';
+import DownloadResume from '@/components/download-resume-btn';
 import FramerWrapper from '@/components/animation/framer-wrapper';
 
 // ---------------------------------------------------------------

@@ -99,7 +99,7 @@ export default function Navbar(): React.JSX.Element {
               className={cn(
                 'aspect-square rounded-full bg-gray-200 dark:bg-neutral-800',
                 pathname === item.href &&
-                  'bg-gray-100 !border !border-primary-sky'
+                  'bg-gray-100 border! border-primary-sky!'
               )}
             >
               <DockLabel>{item.title}</DockLabel>
