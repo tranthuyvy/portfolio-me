@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import logo from '../../public/face.jpg';
+import logo from '../../public/face.png';
 
 // -------------------------------------------------
 
@@ -11,8 +11,9 @@ export default function HeroImage(): React.JSX.Element {
       alt="logo"
       loading="eager"
       priority
-      height={1000}
-      width={1000}
+      height={500}
+      width={500}
+      unoptimized
     />
   );
 }

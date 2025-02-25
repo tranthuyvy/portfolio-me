@@ -30,7 +30,7 @@ export default function Home(): React.JSX.Element {
       </FramerWrapper>
 
       <FramerWrapper
-        className="h-full w-[47%] relative block max-lg:hidden"
+        className="h-full w-[30%] relative block max-lg:hidden"
         y={0}
         x={100}
       >
