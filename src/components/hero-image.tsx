@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import logo from '../../public/portfolioLogo.png';
+import logo from '../../public/face.jpg';
 
 // -------------------------------------------------
 
