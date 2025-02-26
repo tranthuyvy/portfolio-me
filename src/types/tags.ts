@@ -1,0 +1,17 @@
+export enum TagEnum {
+  JAVA = 'java',
+  SCSS = 'scss',
+  WEB_3 = 'Web3.0',
+  NEXT_JS = 'NextJS',
+  REACT_JS = 'ReactJs',
+  THREE_JS = 'ThreeJS',
+  METAMASK = 'Metamask',
+  SOLIDITY = 'Solidity',
+  APP_WRITE = 'Appwrite',
+  RAPID_API = 'Rapid-api',
+  NATIVEWIND = 'Nativewind',
+  MATERIAL_UI = 'Material-UI',
+  TAILWIND_CSS = 'TailwindCSS',
+  REACT_NATIVE = 'React-Native',
+  ANDROID_STUDIO = 'android-studio',
+}

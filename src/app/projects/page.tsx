@@ -11,7 +11,7 @@ import { project } from '../data/project';
 
 export default function ProjectPage(): React.JSX.Element {
   return (
-    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-y-scroll">
+    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-y-scroll scrollbar-hide">
       <Badge variant="secondary" className="gap-1.5 py-1 ">
         <Layers className="h-4 w-4" />
         Projects

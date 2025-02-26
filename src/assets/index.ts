@@ -28,22 +28,6 @@ import tesla from './company/tesla.png';
 import lotus from './company/lotus.png';
 import lab_200 from './company/200lab.png';
 
-import cv from './banner/cv-contact.png';
-import ecommerce from './banner/ecommerce.jpg';
-import custom from './banner/custom.png';
-import movie from './banner/movie.png';
-import book from './banner/bookselling.png';
-import mobileselling from './banner/mobileselling.png';
-import drawphoto from './banner/drawphoto.png';
-import dinosaurgame from './banner/dinosaurgame.png';
-import vfiverr from './banner/vfiverr.png';
-import trello from './banner/trello_light.png';
-import alan from './banner/alan.png';
-import web3 from './banner/web3.png';
-import food from './banner/food.png';
-import wedding from './banner/wedding.jpg';
-import car_showcase from './banner/car_showcase.jpg';
-
 import face from './face.jpg';
 import gmail from './gmail.png';
 import birthday from './birth.png';
@@ -79,12 +63,6 @@ export {
   irics,
   lotus,
   tesla,
-  cv,
-  ecommerce,
-  custom,
-  movie,
-  book,
-  mobileselling,
   face,
   gmail,
   birthday,
@@ -93,15 +71,6 @@ export {
   gh,
   linkedin,
   map,
-  drawphoto,
-  dinosaurgame,
-  vfiverr,
-  trello,
-  alan,
-  web3,
-  food,
-  wedding,
-  car_showcase,
   lab_200,
   nextjs,
 };

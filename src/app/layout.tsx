@@ -86,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scrollbar-hide scroll-smooth">
       <body className={`${poppins.variable} ${rubik.variable}`}>
         <main
           className={cn(

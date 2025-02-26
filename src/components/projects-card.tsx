@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 
 import {
@@ -10,22 +11,17 @@ import {
 } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
+import { TagEnum } from '@/types/tags';
+import { ProjectCardType } from '@/types/project-card';
+
 import { buttonVariants } from './ui/button';
 import FramerWrapper from './animation/framer-wrapper';
-import Image from 'next/image';
 
 // ------------------------------------------------------------
 
 interface ProjectCardProps {
   value: ProjectCardType;
   num: number;
-}
-
-interface ProjectCardType {
-  title: string;
-  description: string;
-  tags: string[];
-  link: string;
 }
 
 export default function ProjectCards({
@@ -40,13 +36,13 @@ export default function ProjectCards({
       delay={num / 4}
       duration={0.15}
     >
-      <Card className="w-full h-full flex flex-col hover:shadow-lg transition-all duration-300 border-2">
+      <Card className="w-full h-full flex flex-col hover:shadow-lg transition-all duration-300">
         <Image
-          src={'/banner/web3.png'}
-          alt="Car Showcase"
+          src={value.banner}
+          alt={value.title}
           width={200}
           height={200}
-          className="object-cover w-full h-[12.5rem] mx-auto rounded-lg"
+          className="object-cover w-full h-[12.5rem] mx-auto rounded-t-lg"
         />
 
         <CardHeader className="pb-2">
@@ -64,17 +60,21 @@ export default function ProjectCards({
             {value.tags.map((tag: string, index: number) => {
               const tagStyles =
                 {
-                  NextJS: 'bg-teal-100 text-teal-800',
-                  Freelancing: 'bg-yellow-100 text-yellow-800',
-                  TailwindCSS: 'bg-blue-100 text-blue-800',
-                  Typescript: 'bg-red-100 text-red-800',
-                  MySQL: 'bg-orange-100 text-orange-800',
-                  Zustand: 'bg-purple-100 text-purple-800',
-                  Supabase: 'bg-emerald-100 text-emerald-800',
-                  'Rapid-api': 'bg-green-100 text-green-800',
-                  Vite: 'bg-pink-100 text-pink-800',
-                  Zod: 'bg-cyan-100 text-cyan-800',
-                  'Shadcn Ui': 'bg-violet-100 text-violet-800',
+                  [TagEnum.APP_WRITE]: 'bg-red-100 text-red-800',
+                  [TagEnum.WEB_3]: 'bg-orange-100 text-orange-800',
+                  [TagEnum.METAMASK]: 'bg-amber-100 text-amber-800',
+                  [TagEnum.SOLIDITY]: 'bg-yellow-100 text-yellow-800',
+                  [TagEnum.RAPID_API]: 'bg-emerald-100 text-emerald-800',
+                  [TagEnum.ANDROID_STUDIO]: 'bg-lime-100 text-lime-800',
+                  [TagEnum.JAVA]: 'bg-fuchsia-100 text-fuchsia-800',
+                  [TagEnum.REACT_NATIVE]: 'bg-cyan-100 text-cyan-800',
+                  [TagEnum.NATIVEWIND]: 'bg-green-100 text-green-800',
+                  [TagEnum.SCSS]: 'bg-rose-100 text-rose-800',
+                  [TagEnum.NEXT_JS]: 'bg-sky-100 text-sky-800',
+                  [TagEnum.REACT_JS]: 'bg-blue-100 text-blue-800',
+                  [TagEnum.TAILWIND_CSS]: 'bg-teal-100 text-teal-800',
+                  [TagEnum.MATERIAL_UI]: 'bg-indigo-100 text-indigo-800',
+                  [TagEnum.THREE_JS]: 'bg-zinc-100 text-zinc-800',
                 }[tag] || 'bg-gray-100 text-gray-800';
 
               return (
@@ -92,7 +92,25 @@ export default function ProjectCards({
           </div>
         </CardContent>
 
-        <CardFooter className="pt-2">
+        <CardFooter className="flex gap-3 pt-2">
+          {value.demoLink ? (
+            <Link
+              href={value.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                buttonVariants({
+                  variant: 'default',
+                  size: 'sm',
+                }),
+                'w-fit transition-all hover:translate-y-[-2px] hover:shadow-md group'
+              )}
+            >
+              View Demo
+              <ArrowUpRight className="h-4 w-4 ml-1 hidden group-hover:block -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+            </Link>
+          ) : null}
+
           <Link
             href={value.link}
             target="_blank"
@@ -101,11 +119,12 @@ export default function ProjectCards({
               buttonVariants({
                 variant: 'default',
                 size: 'sm',
+                className: 'bg-blue-600 hover:bg-blue-800',
               }),
               'w-fit transition-all hover:translate-y-[-2px] hover:shadow-md group'
             )}
           >
-            Visit Project
+            Github Project
             <ArrowUpRight className="h-4 w-4 ml-1 hidden group-hover:block -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
           </Link>
         </CardFooter>
