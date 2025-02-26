@@ -12,17 +12,20 @@ import { cn } from '@/lib/utils';
 
 import { buttonVariants } from './ui/button';
 import FramerWrapper from './animation/framer-wrapper';
+import Image from 'next/image';
 
 // ------------------------------------------------------------
 
 interface ProjectCardProps {
-  value: {
-    title: string;
-    description: string;
-    tags: string[];
-    link: string;
-  };
+  value: ProjectCardType;
   num: number;
+}
+
+interface ProjectCardType {
+  title: string;
+  description: string;
+  tags: string[];
+  link: string;
 }
 
 export default function ProjectCards({
@@ -38,6 +41,14 @@ export default function ProjectCards({
       duration={0.15}
     >
       <Card className="w-full h-full flex flex-col hover:shadow-lg transition-all duration-300 border-2">
+        <Image
+          src={'/banner/web3.png'}
+          alt="Car Showcase"
+          width={200}
+          height={200}
+          className="object-cover w-full h-[12.5rem] mx-auto rounded-lg"
+        />
+
         <CardHeader className="pb-2">
           <CardTitle className="text-xl font-bold text-primary">
             {value.title}
@@ -53,17 +64,17 @@ export default function ProjectCards({
             {value.tags.map((tag: string, index: number) => {
               const tagStyles =
                 {
-                  Nextjs: 'bg-teal-100 text-teal-800',
+                  NextJS: 'bg-teal-100 text-teal-800',
                   Freelancing: 'bg-yellow-100 text-yellow-800',
-                  'Shadcn Ui': 'bg-blue-100 text-blue-800',
+                  TailwindCSS: 'bg-blue-100 text-blue-800',
                   Typescript: 'bg-red-100 text-red-800',
                   MySQL: 'bg-orange-100 text-orange-800',
                   Zustand: 'bg-purple-100 text-purple-800',
                   Supabase: 'bg-emerald-100 text-emerald-800',
-                  Npx: 'bg-indigo-100 text-indigo-800',
-                  Library: 'bg-pink-100 text-pink-800',
+                  'Rapid-api': 'bg-green-100 text-green-800',
+                  Vite: 'bg-pink-100 text-pink-800',
                   Zod: 'bg-cyan-100 text-cyan-800',
-                  'React Hook Form': 'bg-violet-100 text-violet-800',
+                  'Shadcn Ui': 'bg-violet-100 text-violet-800',
                 }[tag] || 'bg-gray-100 text-gray-800';
 
               return (

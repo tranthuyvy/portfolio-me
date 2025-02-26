@@ -5,16 +5,9 @@ import { Badge } from '@/components/ui/badge';
 import ProjectCards from '@/components/projects-card';
 import FramerWrapper from '@/components/animation/framer-wrapper';
 
-// -----------------------------------------------------
+import { project } from '../data/project';
 
-const PROJECTS = [
-  {
-    title: 'Mini Threejs',
-    description: 'Mini Threejs project',
-    tags: ['Vite', 'ReactJS'],
-    link: 'https://ttv-tranthuyvy-cv.vercel.app/',
-  },
-];
+// -----------------------------------------------------
 
 export default function ProjectPage(): React.JSX.Element {
   return (
@@ -27,16 +20,16 @@ export default function ProjectPage(): React.JSX.Element {
         <Heading>My Projects</Heading>
         <FramerWrapper y={0} x={200}>
           <p className=" font-poppins text-lg w-full text-primary max-sm:text-base">
-            Here are some of the projects I have worked on. I love to build
-            things that are useful and fun. I am always looking for new
-            opportunities to learn and grow. Feel free to check out my projects
-            and let me know what you think.
+            Following projects showcases my skills. Each project is briefly
+            described with links to source code repositories and live demos. It
+            reflects my ability to solve complex problems, work with different
+            technologies, and manage projects effectively.
           </p>
         </FramerWrapper>
       </div>
 
       <div className=" w-full flex flex-row flex-wrap gap-3 max-lg:flex-col">
-        {PROJECTS.map((val, index) => {
+        {project.map((val, index) => {
           return <ProjectCards key={index} value={val} num={index} />;
         })}
       </div>
